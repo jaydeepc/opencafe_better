@@ -409,7 +409,7 @@ class EngineConfigManager(object):
         config.set(
             'OPENCAFE_ENGINE', 'logging_verbosity', 'STANDARD')
         config.set(
-            'OPENCAFE_ENGINE', 'default_test_repo', 'cloudroast')
+            'OPENCAFE_ENGINE', 'default_test_repo', 'pciservicesroast')
         return config
 
     @staticmethod
