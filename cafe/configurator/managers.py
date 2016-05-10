@@ -189,7 +189,6 @@ class TestEnvManager(object):
         reason, it sets the CAFE_TEST_REPO_PATH directly as well as
         CAFE_TEST_REPO_PACKAGE
         """
-
         return os.path.expanduser(
             self._test_repo_package_name
             or self.engine_config_interface.default_test_repo)
@@ -209,8 +208,9 @@ class TestEnvManager(object):
     def test_log_dir(self):
         log_dir_name = str(datetime.datetime.now()).replace(" ", "_").replace(
             ":", "_")
+
         return os.path.expanduser(
-            os.path.join(self.test_root_log_dir, log_dir_name))
+            os.path.join(self.test_repo_path, "logs", log_dir_name))
 
     @_lazy_property
     def test_config_file_path(self):
