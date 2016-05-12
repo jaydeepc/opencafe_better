@@ -210,7 +210,7 @@ class TestEnvManager(object):
             ":", "_")
 
         return os.path.expanduser(
-            os.path.join(self.test_repo_path, "logs", log_dir_name))
+            os.path.join(os.getcwd(), "logs", log_dir_name))
 
     @_lazy_property
     def test_config_file_path(self):
